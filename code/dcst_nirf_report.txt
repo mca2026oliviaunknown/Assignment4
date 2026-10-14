@@ -1,0 +1,33 @@
+DCST - CST DISCIPLINE NIRF REPORT
+Goa University
+Generated on: 2026-10-14
+
+STUDENTS
+CST2026-01 | Wolverine | MCA
+CST2024-02 | Aachal Wadekar | MSc IT
+
+TEACHING AND NON-TEACHING STAFF
+Dr.Leena Fernandes | Assistant Professor | TEACHING
+Sunil Kumar | Office Assistant | NON_TEACHING
+
+PROGRAMMES AND SUBJECTS
+MCA  Object-Oriented Programming  Linux Lab
+MCA  Database Management Systems  Data Science and ML
+MSc IT  Computer Networks  Network architecture and protocols
+
+ACADEMIC AND NON-ACADEMIC ACTIVITIES
+ISA, Midpoint and SEA | Continuous and semester assessment
+Research Conclave | Research presentations and expert interaction
+Study Tour | Industry exposure and practical learning
+Placement Training | Employability and interview preparation
+Guest Lectures | Interaction with industry professionals
+InfoFest | Technology events, quizzes and coding challenges
+Plateaunia | Cultural and creative student activities
+Play-on | Sports and recreational activities
+
+ YEAR-WISE COUNTS
+2023-24: 100 students (illustrative)
+2024-25: 110 students (illustrative)
+2025-26: 120 students (illustrative)
+
+Please do  Verify all records before official submission.
