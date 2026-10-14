@@ -74,7 +74,7 @@ public class Main {
         System.out.println("Staff category: " + administrator.getStaffType());
 
        
-        // 3. MULTIPLE INTERFACES AND INHERITANCE
+        //  MULTIPLE INTERFACES AND INHERITANCE
        
         System.out.println("\n MULTIPLE INTERFACE IMPLEMENTATION");
 
@@ -107,16 +107,16 @@ public class Main {
         System.out.println("Public information: " + access.publicInfo);
 
         // access.privateInfo;   // Compile-time error
-        // access.protectedInfo; // Not directly accessible here
-        //
+        // access.protectedInfo; // Not accessible here
         
-        // 5. ABSTRACT CLASSES, INTERFACES AND OVERRIDING
+        
+        //  ABSTRACT CLASSES, INTERFACES AND OVERRIDING
 
         System.out.println("\n DEPARTMENT ACTIVITIES");
 
         List<Activity> activities = new ArrayList<>();
 
-        // Academic activities
+        
         activities.add(new AcademicActivity(
                 "ISA, Midpoint and SEA",
                 "Continuous and semester assessment"
@@ -142,7 +142,7 @@ public class Main {
                 "Interaction with industry professionals"
         ));
 
-        // Non-academic activities
+       
         activities.add(new NonAcademicActivity(
                 "InfoFest",
                 "Technology events, quizzes and coding challenges"
@@ -163,20 +163,16 @@ public class Main {
         for (Activity activity : activities) {
             activity.describe();
         }
-
-       
-        // 6. MESSAGE PASSING AND CLASS AS A TYPE
         
 
         System.out.println("\n MESSAGE PASSING");
-
         
         processReport(s1);
         processReport(teacher);
         processReport(activities.get(0));
 
         
-        // 7. POLYMORPHISM: OVERLOADING
+        //  POLYMORPHISM: OVERLOADING
         
 
         System.out.println("\n REPORT GENERATION");
@@ -188,23 +184,21 @@ public class Main {
         printer.print("Annual NIRF Summary", 2025);
 
         
-        // 8. GENERICS AND COLLECTION FRAMEWORK
+        //  GENERICS AND COLLECTION FRAMEWORK
     
 
         System.out.println("\n STUDENTS, STAFF, COURSES AND TASKS");
 
-        // List student records
+        
         List<Student> students = new ArrayList<>();
         students.add(s1);
         students.add(s2);
 
-        // List department staff
+        
         List<Staff> staffMembers = new ArrayList<>();
         staffMembers.add(teacher);
         staffMembers.add(administrator);
 
-        // List programmes and example subjects.
-    
         List<Course> courses = new ArrayList<>();
 
         courses.add(new Course(
@@ -288,7 +282,7 @@ public class Main {
                 + firstItem(courses));
 
         
-        // 9. EXCEPTION HANDLING
+        // EXCEPTION HANDLING
        
 
         System.out.println("\n REPORT VALIDATION");
@@ -305,9 +299,6 @@ public class Main {
         } finally {
             System.out.println("Year validation completed.");
         }
-
-        
-       
 
         System.out.println("\n STUDENT RECORD LOOKUP");
 
@@ -507,7 +498,7 @@ interface Reportable {
     void publishReport();
 }
 
-// A second independent interface.
+
 interface Notifiable {
     void sendNotice(String message);
 }
@@ -517,7 +508,7 @@ interface Notifiable {
 interface DepartmentCommunicator extends Reportable, Notifiable {
 }
 
-// BASE CLASS: DEPARTMENT MEMBERS
+
 
 abstract class DepartmentMember implements Serializable {
 
@@ -547,8 +538,6 @@ abstract class DepartmentMember implements Serializable {
         return memberCount;
     }
 }
-
-
 
 class Student extends DepartmentMember
         implements Reportable, Cloneable {
@@ -607,7 +596,7 @@ class Student extends DepartmentMember
         );
     }
 
-    // Shallow copy
+   
     @Override
     public Student clone() {
         try {
@@ -617,16 +606,13 @@ class Student extends DepartmentMember
         }
     }
 
-    // Deep copy
+    
     public Student deepClone() {
         Student copy = this.clone();
         copy.profile = this.profile.copy();
         return copy;
     }
 }
-
-
-// NESTED STUDENT PROFILE
 
 
 class StudentProfile implements Serializable {
@@ -652,8 +638,6 @@ class StudentProfile implements Serializable {
     }
 }
 
-
-// STAFF CLASS
 
 
 class Staff extends DepartmentMember implements Reportable {
@@ -694,8 +678,6 @@ class Staff extends DepartmentMember implements Reportable {
 }
 
 
-// COORDINATOR: IMPLEMENTS MULTIPLE INTERFACES
-
 
 class DepartmentCoordinator implements DepartmentCommunicator {
 
@@ -719,17 +701,16 @@ class DepartmentCoordinator implements DepartmentCommunicator {
 
 // ACCESS MODIFIERS
 
-
 class AccessDemo {
 
     public String publicInfo = "Public department information";
 
-    private String privateInfo = "Confidential internal information";
+    private String privateInfo = "Confidential information";
 
     protected String protectedInfo = "Information for package/subclass access";
 
     public void showInternalAccess() {
-        System.out.println("Inside AccessDemo:");
+       // System.out.println("Inside AccessDemo:");
         System.out.println(publicInfo);
         System.out.println(privateInfo);
         System.out.println(protectedInfo);
@@ -806,8 +787,6 @@ class NonAcademicActivity extends Activity {
         );
     }
 }
-
-// COURSE AND SUBJECT
 
 class Course {
 
